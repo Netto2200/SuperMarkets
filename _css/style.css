@@ -25,20 +25,17 @@ main{
     background-color: white;
     height: 400px;
 }
-#cadastro{
-    margin-top: 20px;
-}
-#login{
 
+.card-title{
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
+}
+.card-title h2{
+    font-size: 30px;
 }
 form{
-    margin-top: 50px;
-}
-form h2{
-    text-align: center;
-    width: 80%;
-    margin-bottom: 30px;
-    font-size: 20px;
+    margin-top: 20px;
 }
 .form-group{
     margin-bottom: 10px;
@@ -46,9 +43,11 @@ form h2{
     margin-left: .25;
 }
 .form-check{
+    padding-top: 1px;
     margin-left: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
 }
 .btn {
+    margin-top: 10px;
     width: 100%;
 }
