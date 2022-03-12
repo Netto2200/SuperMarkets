@@ -86,7 +86,7 @@ session_start();
                         ?>
                     </div> 
                     
-                    <form action"<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+                    <form action = "<?php echo $_SERVER['PHP_SELF']?>" method="POST">
                         <div class="form-group mx-auto">
                             <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email" name="login">
                         </div>
@@ -103,7 +103,7 @@ session_start();
                     </form>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            <span>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></span>
+                            <span>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></span>
                         </div>
                         <div class="d-flex justify-content-center">
                             <a href="Recuperacao.html">Esqueceu sua senha?</a>
