@@ -13,15 +13,21 @@ $confirmasenha = md5($confirmasenha);
 //echo "Nome: $nome<br>";
 //echo "Email: $login<br>";
 //echo "Senha: $senha<br>";
+$verifica = mysqli_query($conexao, "SELECT login FROM usuarios WHERE login = '$login'");
+$check = mysqli_num_rows($verifica);
 
 if(empty($nome) or empty($login) or empty($senha) or empty($confirmasenha)):
     $erros[] = "<p> Prencha todos os campos</p>";
-elseif($senha != $confirmasenha):
-    $erros[] = "<p>Senhas não conferem</p>";
+   if($senha != $confirmasenha):
+        $erros[] = "<p>Senhas não conferem</p>";
+   endif;
+    if($check == 0):
+        $erros[] = "<p>Esse email ja esta cadastrado</p>";
+    endif;
 else:
     $sql = "INSERT INTO usuarios (nome, login, senha, confirma_senha) VALUES ('$nome', '$login' ,'$senha', '$confirmasenha')"; 
     $resultado = mysqli_query($conexao, $sql);
-    endif;
+endif;
 ?>
 <!DOCTYPE html>
 <html>
