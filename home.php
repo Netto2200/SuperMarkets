@@ -23,7 +23,7 @@ mysqli_close($conexao);
     <title>Document</title>
 </head>
 <body>
-    <h1>Ola <?php echo $dados ['nome'];  ?></h1>
+    <h1>Ola <?php echo $dados ['nome'];?></h1>
     <a href="logout.php">Sair</a>
 </body>
 </html>
